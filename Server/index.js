@@ -45,6 +45,13 @@ app.post('/add', (req, res) => {
     .catch(err => res.json(err))
 })
 
-app.listen(3001, () => {
-    console.log("Server is Running")
-})
+
+const port = process.env.PORT || 3000; // Use the PORT environment variable if available, or use port 3000 by default
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+
+// app.listen(3001, () => {
+//     console.log("Server is Running")
+// })
