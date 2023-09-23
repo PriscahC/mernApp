@@ -8,7 +8,8 @@ app.use(cors())
 app.use(express.json())
 
 // database
-mongoose.connect('mongodb://127.0.0.1:27017/test')
+mongoose.connect('mongodb+srv://DataVis:36652394@datavis.oxhgijj.mongodb.net/')
+
 
 // render on page
 app.get('/get', (req, res) => {
