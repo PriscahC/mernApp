@@ -2,15 +2,13 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const TodoModel = require('./Models/Todo')
-const mongodb = import.meta.env.VITE_Mongo_URL;
-// In Vite, environment variables are accessed using import.meta.env and the VITE_ prefix.
 
 const app = express()
 app.use(cors())
 app.use(express.json())
 
 // database
-mongoose.connect(`${mongodb}`)
+mongoose.connect('mongodb+srv://DataVis:36652394@datavis.oxhgijj.mongodb.net/')
 
 
 // render on page
@@ -48,7 +46,7 @@ app.post('/add', (req, res) => {
 })
 
 
-const port = process.env.PORT || 10000; // Use the PORT environment variable if available, or use port 3000 by default
+const port = process.env.PORT || 3000; // Use the PORT environment variable if available, or use port 3000 by default
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
