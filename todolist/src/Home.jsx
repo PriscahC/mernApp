@@ -30,11 +30,11 @@ function Home() {
     }
   return (
     <div className='home'>
-       <h2>To do List</h2> 
+       <h2>Tasks To do</h2> 
        <Create/>
        {
         todos.length === 0 ?
-        <div><h2>No Record</h2></div>
+        <div><h2>New Tasks</h2></div>
         :
         todos.map(todo => (
             <div className='task'>
