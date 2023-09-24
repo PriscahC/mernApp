@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { BsCircleFill, BsFillTrashFill, BsFillCheckCircleFill } from 'react-icons/bs';
-import Create from './create'
+import Create from './Create'
 import axios from 'axios'
 
 function Home() {
