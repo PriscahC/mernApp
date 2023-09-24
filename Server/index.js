@@ -2,13 +2,15 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const TodoModel = require('./Models/Todo')
+const mongodb = import.meta.env.VITE_Mongo_URL;
+// In Vite, environment variables are accessed using import.meta.env and the VITE_ prefix.
 
 const app = express()
 app.use(cors())
 app.use(express.json())
 
 // database
-mongoose.connect('mongodb+srv://DataVis:36652394@datavis.oxhgijj.mongodb.net/')
+mongoose.connect(`${mongodb}`)
 
 
 // render on page
