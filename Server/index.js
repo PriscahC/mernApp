@@ -46,7 +46,7 @@ app.post('/add', (req, res) => {
 })
 
 
-const port = process.env.PORT || 3000; // Use the PORT environment variable if available, or use port 3000 by default
+const port = process.env.PORT || 10000; // Use the PORT environment variable if available, or use port 3000 by default
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
