@@ -42,4 +42,4 @@ export default function App() {
   	);
 }
 
-
+// Routes documentation (https://www.datainfinities.com/73/cannot-destructure-property-basename-usecontext)
