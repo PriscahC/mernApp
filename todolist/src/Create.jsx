@@ -4,7 +4,8 @@ import axios from 'axios'
 function Create() {
     const [task, setTask] = useState()
     const handleAdd = () => {
-        axios.post('https://mern-app-kzx4.onrender.com/add', {task: task})
+        // axios.post('https://mern-app-kzx4.onrender.com/add', {task: task})
+        axios.post('http://localhost:3001/add', {task: task})
         .then(result => {
           location.reload()   //to automatically reload
         })  //(for testing) .then(result => console.log(result))

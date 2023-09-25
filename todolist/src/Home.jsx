@@ -7,13 +7,15 @@ function Home() {
     const [todos, setTodos] = useState([])
     // render on our page
     useEffect(() => {
-      axios.get('https://mern-app-kzx4.onrender.com/get')
+      // axios.get('https://mern-app-kzx4.onrender.com/get')
+      axios.get('http://localhost:3001/get')
       .then(result => setTodos(result.data))
       .catch(err => console.log(err))
     }, [])
 
     const handleEdit = (id) => {
       axios.put('https://mern-app-kzx4.onrender.com/update/'+id)
+      // axios.put('http://localhost:3001/update/'+id)
       .then(result => {
         location.reload() //auto reloading
       }) //(for Testing) console.log(result)
@@ -23,6 +25,7 @@ function Home() {
     // Delete item
     const handleDelete = (id) => {
       axios.delete('https://mern-app-kzx4.onrender.com/delete/'+id)
+      // axios.delete('http://localhost:3001/delete/'+id)
       .then(result => {
         location.reload() //auto reloading
       }) //(for Testing) console.log(result)

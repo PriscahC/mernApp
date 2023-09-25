@@ -1,7 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
-const TodoModel = require('./Models/Todo')
+const TodoModel = require('./Models/todo')
 
 const app = express()
 app.use(cors())
@@ -9,7 +9,7 @@ app.use(express.json())
 
 // database
 mongoose.connect('mongodb+srv://DataVis:36652394@datavis.oxhgijj.mongodb.net/')
-
+// mongoose.connect('mongodb://127.0.0.1:27017/test')
 
 // render on page
 app.get('/get', (req, res) => {
@@ -45,13 +45,6 @@ app.post('/add', (req, res) => {
     .catch(err => res.json(err))
 })
 
-
-const port = process.env.PORT || 3000; // Use the PORT environment variable if available, or use port 3000 by default
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
-
-// app.listen(3001, () => {
-//     console.log("Server is Running")
-// })
+app.listen(3001, () => {
+    console.log("Server is Running")
+})
